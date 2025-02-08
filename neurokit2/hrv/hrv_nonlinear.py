@@ -283,8 +283,6 @@ def hrv_nonlinear(peaks, sampling_rate=1000, show=False, **kwargs):
     # Heart Rate Asymmetry
     out = _hrv_nonlinear_poincare_hra(rri, rri_time=rri_time, rri_missing=rri_missing, out=out)
 
-    # DFA
-    out = _hrv_dfa(rri, out, **kwargs)
 
     # Complexity
     tolerance = 0.2 * np.std(rri, ddof=1)
